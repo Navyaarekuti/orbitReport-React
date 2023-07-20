@@ -1,22 +1,5 @@
-// const Table = ({ sat }) => {
-//   return (
-//       <table>
-//        <thead>
-//         <tr>
-//           <th>Header TBD</th>
-//         </tr>
-//         </thead>
-//         <tbody>
-//         <tr>
-//           <td>Row Data TBD</td>
-//         </tr>
-//         </tbody>
-//       </table>
-//   );
-// };
 
-
-
+import "./styling.css";
 
 const Table = ({ sat }) => {
   return (
@@ -32,19 +15,22 @@ const Table = ({ sat }) => {
       <tbody>
         {sat.map((data) => {
           let status;
-          if (data.operational) {
-            status = 'Active';
-          } else {
-            status = 'Inactive';
+          if (data.operational)
+           {
+            status = 'active';
+          }
+           else 
+           {
+            status = 'inactive';
           }
 
           return (
-            <tr key={data.id}>
-              <td>{data.name}</td>
-              <td>{data.type}</td>
-              <td>{data.launchDate}</td>
-              <td>{status}</td>
-            </tr>
+          <tr key={data.id}>
+            <td>{data.name}</td>
+            <td>{data.type}</td>
+            <td>{data.launchDate}</td>
+            <td>{status}</td>
+          </tr>
           );
         })}
       </tbody>

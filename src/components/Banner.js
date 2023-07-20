@@ -1,3 +1,5 @@
+import "./styling.css";
+
 const Banner = () => (
     <header>
       <h1>Orbit Report</h1>
